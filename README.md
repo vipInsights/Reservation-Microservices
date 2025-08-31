@@ -83,6 +83,11 @@ This will start:
 * `POST /hotels` – Create hotel
 * `GET /hotels/{id}` – Get hotel by ID
 * `GET /hotels` – List hotels
+  
+### Payment Service
+*  POST /payments – Create hotel
+*  GET /payments/{id} – Get hotel by ID
+*  GET /payments – List hotels
 
 ### Reservation Service
 
@@ -108,7 +113,7 @@ A Postman collection is provided under `postman/` directory (if available). Impo
 * Add **API Gateway** (Spring Cloud Gateway)
 * Add **Service Discovery** (Eureka)
 * Add **Centralized Logging & Monitoring** (Zipkin)
-* Implement **SpringFlux** for communication between services
+* Implement **SpringFlux WebClient** for communication between services
 
 ---
 
