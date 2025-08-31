@@ -33,7 +33,7 @@ A microservices-based reservation system built using **Spring Boot**, **MongoDB*
 │── docker-compose.yml          # Orchestration file for all services
 │── customer-service/           # Microservice for customer management
 │── hotel-service/              # Microservice for hotel management
-│── hotel-service/              # Microservice for payment management
+│── payment-service/              # Microservice for payment management
 │── reservation-service/        # Microservice for reservations
 │── notification-service/       # Microservice for notifications
 ```
@@ -63,7 +63,7 @@ This will start:
 
 * **Customer Service** → [http://localhost:8081](http://localhost:8081)
 * **Hotel Service** → [http://localhost:8084](http://localhost:8084)
-* **Hotel Service** → [http://localhost:8087](http://localhost:8087)
+* **Payment Service** → [http://localhost:8087](http://localhost:8087)
 * **Reservation Service** → [http://localhost:8086](http://localhost:8086)
 * **Notification Service** → [http://localhost:8052](http://localhost:8052)
 * **MongoDB** → mongodb://localhost:27017
