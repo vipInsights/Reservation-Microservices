@@ -1,0 +1,17 @@
+
+#INSTALLATION OF THE OPERATING SYSTEM
+FROM openjdk:17-jdk-slim
+
+LABEL authors="vipInsights"
+
+#PLACEMENT OF THE EXECUTABLE [MICROSERVICE] ON THE IMAGE
+COPY target/*.jar customer-service-dev-1.jar
+
+#EXPOSE PORTS FOR INCOMING TRAFFIC - HOST_PORT:CONTAINER_PORT
+#EXPOSE 8081:8081
+
+#INSTALLING UTILITIES
+#RUN apt-get update && apt-get install -y gcc curl
+
+#ENTRYPOINT OF THE CONTAINER THROUGH THE MICROSERVICE
+ENTRYPOINT ["java","-jar","customer-service-dev-1.jar"]

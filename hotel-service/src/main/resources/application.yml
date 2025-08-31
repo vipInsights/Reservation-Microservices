@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: hotel-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/hoteldb
+      #uri:mongodb://admin:secret@mongodb:27017/customerdb?authSource=admin
+  #config:
+    #import: configserver:http://localhost:8888
+  cloud:
+    config:
+      enabled: false   # 👈 disables config server completely
+server:
+  port: 8084
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+

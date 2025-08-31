@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: reservation-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/reservationdb
+      #uri:mongodb://admin:secret@mongodb:27017/reservationdb?authSource=admin
+    #config:
+    #import: configserver:http://localhost:8888
+  cloud:
+    config:
+      enabled: false   # 👈 disables config server completely
+server:
+  port: 8086
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+

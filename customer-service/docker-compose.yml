@@ -1,0 +1,59 @@
+services:
+  customer-service:
+    image: "vipininsights/customerdev2:s1"
+    container_name: customer-ms
+    ports:
+      - "8081:8081"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - reservation
+  hotel-service:
+    image: "vipininsights/hoteldev2:s1"
+    container_name: hotel-ms
+    ports:
+      - "8084:8084"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - reservation
+  payment-service:
+    image: "vipininsights/paymentdev2:s1"
+    container_name: payment-ms
+    ports:
+      - "8087:8087"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - reservation
+  reservation-service:
+    image: "vipininsights/reservationdev2:s1"
+    container_name: reservation-ms
+    ports:
+      - "8086:8086"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - reservation
+  notification-service:
+    image: "vipininsights/notificationdev2:s1"
+    container_name: notification-ms
+    ports:
+      - "8052:8052"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - reservation
+networks:
+  vipininsights:
+    driver: "bridge"
